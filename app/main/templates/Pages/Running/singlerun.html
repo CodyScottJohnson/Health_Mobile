@@ -1,0 +1,27 @@
+<ion-view view-title="Running Single">
+  <ion-content class="Running2 Single">
+    <div style="height:400px;overflow:hidden" id="google-maps"></div>
+    <div class="row stats">
+      <div class="row">
+        <div class="col stat">
+          <i class="fa fa-heartbeat"></i>
+          {{run[0].average_heart_rate}}
+        </div>
+        <div class="col stat">
+          <i class="ion-android-stopwatch"></i> {{((run[0].duration/60.0)/(run[0].total_distance/1609.34))| pace}}/mi
+        </div>
+      </div>
+      <div class="row">
+        <div class="col stat">
+            <i class="ion-ios-clock"></i> {{(run[0].duration/60.0)| pace}}
+        </div>
+        <div class="col stat">
+            <i class="fa fa-road"></i> {{(run[0].total_distance/1609.34)| number: 2 }}
+        </div>
+      </div>
+    </div>
+    <div class="date">
+      {{run[0].start_time|sqldate:'MMM Do @ h A'}}
+    </div>
+  </ion-content>
+</ion-view>

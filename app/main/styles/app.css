@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Gravitas+One|Roboto:400,700|Arvo:400,700");
+/* Main Primary color */
+/* Main Primary color */
+/* Main Secondary color (2) */
+/* Main Complement color */
+.center.vertical {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+.center.horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+}
+.center.both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+.scrollbar {
+  overflow: hidden;
+}
+.scrollbar:hover {
+  overflow: auto;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(95, 150, 191, 0.3);
+  border-radius: 20px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(221, 221, 221, 0.01);
+  border-radius: 20px;
+}
+.clickable:hover {
+  cursor: pointer;
+}
+.background {
+  background-image: linear-gradient(-45deg, #f8585a 0%, #f97072 8%, #FD8d68 100%);
+}
+.Font_Header {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.Font_Banner {
+  font-family: 'Gravitas One', cursive;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.Font_Body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  vertical-align: middle;
+}
+.bar-stable {
+  background-image: linear-gradient(-45deg, #f8585a 0%, #f97072 8%, #FD8d68 100%) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.sidemenu .logout {
+  position: absolute;
+  display: block;
+  bottom: 100px;
+  left: 10px;
+  color: #FD8E68;
+}
+.sidemenu .list .item {
+  background: none!important;
+  border: none!important;
+  color: #FD8E68;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.sidemenu .list .item:hover {
+  cursor: pointer;
+}
+.sidemenu .list .item i {
+  margin-left: 30px;
+}
+.sidemenu .item-avatar {
+  width: 90%;
+  background: none!important;
+  border: none;
+  height: 100px;
+}
+.sidemenu .item-avatar img {
+  height: 80px!important;
+  width: 80px!important;
+  max-height: 80px!important;
+  max-width: 80px!important;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  top: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.sidemenu .item-avatar h2 {
+  margin-top: 12px;
+}
+.Running {
+  background-color: #eeeeee;
+  padding: 5px;
+}
+.Running .top_panel {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 5px;
+}
+.Running .item-divider {
+  background-image: linear-gradient(-45deg, #f8585a 0%, #f97072 8%, #FD8d68 100%);
+  color: rgba(255, 255, 255, 0.9);
+}
+.Running .detail {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.Running .detail .date {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  vertical-align: middle;
+  font-size: 17px;
+  text-align: center;
+}
+.Running .detail .date span {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.Running .value {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: rgba(253, 142, 104, 0.05);
+}
+.Running .value i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.RunCircles_List {
+  width: 70px;
+  margin: 0;
+}
+.RunCircles {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.RunCircles span {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+  text-align: center;
+  color: #333333;
+}
+.list_divider {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgba(128, 128, 128, 0.8);
+  text-align: center!important;
+  padding: 15px;
+}
+.detail {
+  padding: 50px !important;
+}
+.list_detail_month.button div {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #676767;
+  text-shadow: none;
+  font-size: 13px;
+  position: relative;
+  display: block;
+  line-height: 30px;
+}
+.list_detail_month.button div span {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: rgba(128, 128, 128, 0.8);
+  display: block;
+}
+.Running2.Single .date {
+  background: #777777;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  vertical-align: middle;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.Running2.Single .stats {
+  background-image: linear-gradient(-45deg, #f8585a 0%, #f97072 8%, #FD8d68 100%);
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16), 0 -3px 6px rgba(0, 0, 0, 0.23);
+  display: block;
+  position: relative;
+  height: 100px;
+}
+.Running2.Single .stats .stat {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #B82428;
+  vertical-align: middle;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 20px;
+  height: 50px;
+}

@@ -1,0 +1,8 @@
+<ion-view view-title="Dashboard">
+  <!-- do you want padding? -->
+  <ion-content class="padding">
+    <i class="ion-ios-refresh" ng-click="SyncBloodPressure()" style="font-size:50px"></i>
+    <div line-chart line-data='HealthKit.BloodPressure' line-xkey='Date' line-ykeys='["Diastolic","Systolic"]' line-labels='["Diastolic","Systolic"]' line-resize='true'  >
+    </div>
+  </ion-content>
+</ion-view>

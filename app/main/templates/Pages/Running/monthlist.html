@@ -1,0 +1,70 @@
+<ion-view view-title="Running">
+  <ion-content>
+    <ion-list can-swipe="true">
+      <div ng-repeat="(key, value) in Running.Month|orderBy:['-First_Run']|groupBy:'[-Year]'">
+        <div class="item item-divider list_divider">
+          {{key|trim:'-'}}
+        </div>
+        <ion-item ng-repeat="Month in value|orderBy:'-First_Run'" class="detail" style="padding:0!important">
+          <div class="row" style="padding:0!important;margin:0">
+            <div class="col col-25 Font_Body" style="vertical-align:middle;font-size:30px;padding:30px;color:grey">
+              {{Month.First_Run|sqldate:"MMMM"}}
+            </div>
+            <div class="col col-offset-50">
+              <div class="RunCircles_List">
+                <round-progress max="15" current="Month.Month_Runs" color="url(#ChartGradient1)" bgcolor="url(#ChartGradient1BG)" radius="100" stroke="30" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart" animation-delay="0">
+                  <round-progress max="75" current="Month.Month_Distance" color="url(#ChartGradient2)" bgcolor="url(#ChartGradient2BG)" radius="100" stroke="30" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart" offset="30"
+                      animation-delay="0"></round-progress>
+                  <round-progress max="inverse(7.5)" current="inverse(Month.Month_Avg_Pace)" color="url(#radialGradient-1)" bgcolor="url(#radialGradient-1BG)" radius="100" stroke="30" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart"
+                      offset="60" animation-delay="0"></round-progress>
+                  <svg>
+             <linearGradient id="ChartGradient1" x1="0" x2="0" y1="0" y2="1">
+                 <stop offset="5%"  stop-color="#FD8d68"/>
+                 <stop offset="95%" stop-color="#f97072"/>
+             </linearGradient>
+             <linearGradient id="ChartGradient1BG" x1="0" x2="0" y1="0" y2="1">
+                 <stop offset="5%"  stop-opacity=".1" stop-color="#FD8d68"/>
+                 <stop offset="95%"  stop-opacity=".1" stop-color="#f97072"/>
+             </linearGradient>
+             <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="ChartGradient2">
+                 <stop stop-color="#646EEB" offset="0%"></stop>
+                 <stop stop-color="#c5c9f7" offset="100%"></stop>
+             </linearGradient>
+             <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="ChartGradient2BG">
+                 <stop stop-color="#646EEB" stop-opacity=".1" offset="0%"></stop>
+                 <stop stop-color="#c5c9f7" stop-opacity=".1" offset="100%"></stop>
+             </linearGradient>
+             <radialGradient cx="100%" cy="6.5652725%" fx="100%" fy="6.5652725%" r="147.233961%" id="radialGradient-1">
+                 <stop stop-color="#70FABB" offset="0%"></stop>
+                 <stop stop-color="#E2E85B" offset="100%"></stop>
+             </radialGradient>
+             <radialGradient cx="100%" cy="6.5652725%" fx="100%" fy="6.5652725%" r="147.233961%" id="radialGradient-1BG">
+                 <stop stop-color="#70FABB" stop-opacity=".1" offset="0%"></stop>
+                 <stop stop-color="#E2E85B" stop-opacity=".1" offset="100%"></stop>
+             </radialGradient>
+           </svg>
+                </round-progress>
+              </div>
+            </div>
+          </div>
+          <ion-option-button class="list_detail_month" ng-click="share(item)">
+            <div>{{Month.Month_Runs}}
+            <span>Runs</span></div>
+          </ion-option-button>
+          <ion-option-button class="list_detail_month" ng-click="share(item)">
+            <div>{{Month.Month_Distance| number: 2}} mi
+            <span>Distance</span></div>
+          </ion-option-button>
+          <ion-option-button class="list_detail_month" ng-click="share(item)">
+              <div>{{Month.Month_Avg_Pace| pace}} /mi
+            <span>Pace</span></div>
+          </ion-option-button>
+          <ion-option-button class="list_detail_month" ng-click="share(item)">
+              <div>{{Month.Month_Calories}}
+            <span>Calories</span></div>
+          </ion-option-button>
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

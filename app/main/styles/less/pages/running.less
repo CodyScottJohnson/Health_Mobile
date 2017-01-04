@@ -1,0 +1,132 @@
+.Running {
+  background-color: darken(@gray-lighter,0%);
+  padding: 5px;
+
+  .top_panel {
+    .BoxShadowHelper(3);
+    padding: 5px;
+  }
+
+  .item-divider {
+    .background;
+    color: fade(white,90%);
+  }
+
+  .detail {
+    padding: 0 !important;
+    margin: 0 !important;
+
+    .date {
+      margin: 0;
+      .Font_Body;
+      font-size: 17px;
+      text-align: center;
+
+      span {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .value {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    .Font_Body;
+    font-weight: bold;
+    font-size: 20px;
+    color: @gray-dark;
+    .BoxShadowHelper(1);
+    background-color: fade(@color-secondary-0,5%);
+
+    i {
+      font-size: 25px;
+      margin-right: 10px;
+    }
+  };
+}
+
+.RunCircles_List {
+  width: 70px;
+  margin: 0;
+}
+
+.RunCircles {
+  width: 100%;
+  display: block;
+  position: relative;
+
+  span {
+    z-index: 99;
+    position: absolute;
+    .center.both;
+    .Font_Body;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 42px;
+    text-align: center;
+    color: @gray-dark;
+  }
+
+}
+
+.list_divider {
+  .Font_Header;
+  font-weight: bolder;
+  font-size: 30px;
+  color: fade(grey,80%);
+  text-align: center!important;
+  padding: 15px;
+}
+.detail {
+  padding: 50px !important;
+}
+.list_detail_month {
+  &.button {
+    div {
+      .Font_Header;
+      color: darken(grey,10%);
+      text-shadow: none;
+      font-size: 13px;
+      position: relative;
+      display: block;
+      line-height: 30px;
+
+      span {
+        .Font_Header;
+        font-weight: bolder;
+        color: fade(grey,80%);
+        display: block;
+      }
+    }
+  }
+
+
+}
+.Running2{
+  &.Single {
+    .date{
+      background: @gray-light;
+      .Font_Body;
+      color: white;
+      font-size:20px;
+      text-align: center;
+      padding:10px;
+    }
+    .stats {
+      .background;
+      .BoxShadowHelperUp(2);
+      display: block;
+      position: relative;
+      height: 100px;
+      .stat{
+        .Font_Body;
+        color:@gray-lighter;
+        text-align: center;
+        font-size: 20px;
+        height:50px;
+      }
+    }
+  }
+}

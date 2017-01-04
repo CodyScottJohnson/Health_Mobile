@@ -1,0 +1,89 @@
+<ion-view view-title="Running">
+  <!-- do you want padding? -->
+  <ion-content class="padding Running">
+    <div class="top_panel">
+    <div class="RunCircles">
+    <round-progress max="15" current="Running.CurrentMonth.Overview.Month_Runs" color="url(#ChartGradient1)" bgcolor="url(#ChartGradient1BG)" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart" animation-delay="0">
+      <round-progress max="75" current="Running.CurrentMonth.Overview.Month_Distance" color="url(#ChartGradient2)" bgcolor="url(#ChartGradient2BG)" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart"
+          offset="20" animation-delay="0"></round-progress>
+      <round-progress max="inverse(7.5)" current="inverse(Running.CurrentMonth.Overview.Month_Avg_Pace)" color="url(#radialGradient-1)" bgcolor="url(#radialGradient-1BG)" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart"
+          offset="40" animation-delay="0"></round-progress>
+      <svg>
+       <linearGradient id="ChartGradient1" x1="0" x2="0" y1="0" y2="1">
+           <stop offset="5%"  stop-color="#FD8d68"/>
+           <stop offset="95%" stop-color="#f97072"/>
+       </linearGradient>
+       <linearGradient id="ChartGradient1BG" x1="0" x2="0" y1="0" y2="1">
+           <stop offset="5%"  stop-opacity=".1" stop-color="#FD8d68"/>
+           <stop offset="95%"  stop-opacity=".1" stop-color="#f97072"/>
+       </linearGradient>
+       <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="ChartGradient2">
+           <stop stop-color="#646EEB" offset="0%"></stop>
+           <stop stop-color="#c5c9f7" offset="100%"></stop>
+       </linearGradient>
+       <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="ChartGradient2BG">
+           <stop stop-color="#646EEB" stop-opacity=".1" offset="0%"></stop>
+           <stop stop-color="#c5c9f7" stop-opacity=".1" offset="100%"></stop>
+       </linearGradient>
+       <radialGradient cx="100%" cy="6.5652725%" fx="100%" fy="6.5652725%" r="147.233961%" id="radialGradient-1">
+           <stop stop-color="#70FABB" offset="0%"></stop>
+           <stop stop-color="#E2E85B" offset="100%"></stop>
+       </radialGradient>
+       <radialGradient cx="100%" cy="6.5652725%" fx="100%" fy="6.5652725%" r="147.233961%" id="radialGradient-1BG">
+           <stop stop-color="#70FABB" stop-opacity=".1" offset="0%"></stop>
+           <stop stop-color="#E2E85B" stop-opacity=".1" offset="100%"></stop>
+       </radialGradient>
+     </svg>
+    </round-progress>
+    <span>{{Running.CurrentMonth.Overview.First_Run|sqldate:"MMM"}}</span>
+  </div>
+  <div class="row" style="margin-top:5px;">
+    <div class="col value" >
+      <i class="ion-ios-pulse-strong"></i>
+      {{Running.CurrentMonth.Overview.Month_Runs}}
+    </div>
+    <div class="col value">
+      <i class="fa fa-road"></i>{{Running.CurrentMonth.Overview.Month_Distance| number: 2}} mi
+    </div>
+  </div>
+  <div class="row">
+    <div class="col value" >
+        <i class="ion-android-stopwatch"></i> {{Running.CurrentMonth.Overview.Month_Avg_Pace| pace}} /mi
+    </div>
+    <div class="col value">
+      <i class="ion-flame"></i>
+      {{Running.CurrentMonth.Overview.Month_Calories}}
+    </div>
+  </div>
+</div>
+<div class="list">
+
+  <div class="item item-divider item-icon-right">
+    Detail
+    <i class="icon ion-ios-refresh-outline"></i>
+  </div>
+
+  <a ui-sref="main.SingleRun({RunID:run.Run_ID})"ng-repeat="run in Running.CurrentMonth.Detail|orderBy:'start_time'" class="item detail" >
+    <div class="row">
+    <div class="col col-25 date" >
+      <span>{{run.start_time|sqldate:'ddd'}}</span> <br />
+      {{run.start_time|sqldate:'DD'}}
+    </div>
+    <div class="col">
+      <b>{{(run.total_distance/1609.34)| number:2}} miles</b><br />
+      {{(run.duration/60)| number:2}} min
+    </div>
+  </div>
+  </a>
+
+</div>
+
+    <div area-chart area-data='Running.Month' area-xkey='Label' area-ykeys='["Month_Runs"]' area-labels='["Number of Runs"]' area-resize='true'>
+    </div>
+    <div ng-repeat="Month in Running.Month|orderBy:'-First_Run'" style="margin-top:20px">
+      <div ng-include="'main/templates/Pages/Running/runoverviewcard.html'">
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

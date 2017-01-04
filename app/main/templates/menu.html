@@ -1,0 +1,93 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <!-- CONTENT -->
+  <ion-side-menu-content>
+
+    <!-- header bar -->
+    <!-- the nav bar will be updated as we navigate between views -->
+    <ion-nav-bar class="bar-stable">
+      <!-- back button, shown if applicable -->
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <!-- nav button, shown if applicable -->
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- ROUTING INJECTED HERE: pageContent -->
+    <ion-nav-view name="pageContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <!-- SIDEMENU -->
+  <ion-side-menu side="left">
+
+
+    <!-- menu content -->
+
+    <!-- menu content -->
+    <ion-content class="sidemenu" style="background-color:#F0F0F0">
+      <div class="row" style="height:50px;">
+      </div>
+      <div class="row">
+        <a class="item item-avatar">
+         <img ng-src="https://jfsapp.com/Images/ProfilePhotos/{{currentUser.Info.display_photo||'CodyDisplay.png'}}">
+       </a>
+      </div>
+      <div class="list">
+
+      <a menu-close class="item item-icon-left" ui-sref="main.Dashboard">
+        <i class="icon ion-stats-bars"></i>
+        Dashboard
+      </a>
+
+      <a menu-close class="item item-icon-left" ui-sref="main.Run">
+        <i class="icon">
+<svg style="display:inline-block" width="30px" height="96px" viewBox="0 8 513 496" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="running" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, 8.000000)">
+        <g id="Group" fill="#FD8E68">
+            <g id="Shape">
+                <g>
+                    <path d="M503.427,103.44 L502.174,102.186 C490.398,90.41 471.207,90.384 459.36,102.221 L413.271,148.795 C410.843,151.231 406.959,151.329 404.426,148.998 L339.808,89.341 C333.532,83.541 325.366,80.354 316.812,80.354 L220.688,80.354 C218.419,80.354 216.248,81.219 214.606,82.773 L133.136,160.129 C121.201,172.073 120.38,191.326 131.318,203.049 C137.162,209.317 145.054,212.768 153.537,212.768 L153.687,212.768 C162.1,212.724 170.186,209.149 175.774,203.04 L233.312,142.147 L253.907,142.147 L119.63,292.218 L36.81,292.218 C17.177,292.218 1.032,306.898 0.052,325.639 C-0.469,335.429 2.956,344.733 9.692,351.83 C16.33,358.83 25.661,362.838 35.31,362.838 L158.896,362.838 C161.332,362.838 163.663,361.832 165.34,360.04 L228.66,292.447 L281.908,348.131 L265.833,450.866 C261.781,467.886 269.947,485.223 285.245,492.064 C289.959,494.183 294.964,495.242 299.943,495.242 C305.301,495.242 310.633,494.015 315.541,491.587 C325.022,486.891 331.837,478.302 334.317,467.62 L361.78,320.314 C362.31,317.454 361.4,314.505 359.335,312.449 L286.04,239.251 L344.267,181.113 L384.856,221.693 C396.191,233.028 415.947,233.028 427.273,221.693 L503.429,145.546 C509.052,139.923 512.151,132.437 512.151,124.492 C512.149,116.54 509.05,109.063 503.427,103.44 Z"></path>
+                    <path d="M406.065,106.837 C435.276,106.837 459.031,83.082 459.031,53.871 C459.031,24.66 435.276,0.905 406.065,0.905 C376.855,0.905 353.099,24.66 353.099,53.871 C353.1,83.082 376.855,106.837 406.065,106.837 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></i>
+        Running
+      </a>
+
+      <a menu-close class="item item-icon-left" ui-sref="main.SingleRun">
+        <i class="icon">
+<svg width="25px" height="96px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs></defs>
+    <g id="scale" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M494.933,0 L17.067,0 C7.641,0 0,7.641 0,17.067 L0,494.932 C0,504.358 7.641,511.999 17.067,511.999 L494.932,511.999 C504.358,511.999 511.999,504.358 511.999,494.932 L511.999,17.067 C512,7.641 504.359,0 494.933,0 Z M394.441,121.44 L327.347,188.534 C322.133,193.748 313.919,194.332 308.005,189.93 C288.671,175.537 264.679,170.203 241.887,173.914 L178.966,108.964 C172.408,102.194 161.603,102.022 154.832,108.581 C148.062,115.139 147.891,125.944 154.449,132.715 L207.496,187.474 C206.316,188.265 205.146,189.077 203.999,189.932 C198.097,194.325 189.858,193.739 184.656,188.537 L117.562,121.443 C114.64,118.521 113.07,114.514 113.227,110.386 C113.384,106.258 115.257,102.384 118.39,99.689 C197.257,31.84 314.748,31.84 393.617,99.689 C396.747,102.382 398.612,106.256 398.768,110.383 C398.922,114.505 397.36,118.52 394.441,121.44 Z" id="Shape" fill="#FD8E68"></path>
+    </g>
+</svg></i>
+  Info
+
+      </a>
+
+      <a menu-close class="item item-icon-left" ui-sref="main.RunMonthList">
+        <i class="icon ion-person-stalker"></i>
+        Friends
+        <span class="badge badge-assertive">0</span>
+      </a>
+      <a menu-close class="item item-icon-left" ng-click="logout()">
+        <i class="icon ion-log-out"></i>
+        Logout
+      </a>
+
+    </div>
+    </ion-content>
+
+
+  </ion-side-menu>
+
+</ion-side-menus>

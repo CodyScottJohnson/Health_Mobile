@@ -1,0 +1,54 @@
+<div class="top_panel card">
+<div class="RunCircles">
+<round-progress max="15" current="Month.Month_Runs" color="url(#ChartGradient1)" bgcolor="url(#ChartGradient1BG)" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart" animation-delay="0">
+  <round-progress max="75" current="Month.Month_Distance" color="url(#ChartGradient2)" bgcolor="url(#ChartGradient2BG)" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart"
+      offset="20" animation-delay="0"></round-progress>
+  <round-progress max="inverse(7.5)" current="inverse(Month.Month_Avg_Pace)" color="url(#radialGradient-1)" bgcolor="url(#radialGradient-1BG)" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="true" duration="800" animation="easeInOutQuart"
+      offset="40" animation-delay="0"></round-progress>
+  <svg>
+   <linearGradient id="ChartGradient1" x1="0" x2="0" y1="0" y2="1">
+       <stop offset="5%"  stop-color="#FD8d68"/>
+       <stop offset="95%" stop-color="#f97072"/>
+   </linearGradient>
+   <linearGradient id="ChartGradient1BG" x1="0" x2="0" y1="0" y2="1">
+       <stop offset="5%"  stop-opacity=".1" stop-color="#FD8d68"/>
+       <stop offset="95%"  stop-opacity=".1" stop-color="#f97072"/>
+   </linearGradient>
+   <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="ChartGradient2">
+       <stop stop-color="#646EEB" offset="0%"></stop>
+       <stop stop-color="#c5c9f7" offset="100%"></stop>
+   </linearGradient>
+   <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="ChartGradient2BG">
+       <stop stop-color="#646EEB" stop-opacity=".1" offset="0%"></stop>
+       <stop stop-color="#c5c9f7" stop-opacity=".1" offset="100%"></stop>
+   </linearGradient>
+   <radialGradient cx="100%" cy="6.5652725%" fx="100%" fy="6.5652725%" r="147.233961%" id="radialGradient-1">
+       <stop stop-color="#70FABB" offset="0%"></stop>
+       <stop stop-color="#E2E85B" offset="100%"></stop>
+   </radialGradient>
+   <radialGradient cx="100%" cy="6.5652725%" fx="100%" fy="6.5652725%" r="147.233961%" id="radialGradient-1BG">
+       <stop stop-color="#70FABB" stop-opacity=".1" offset="0%"></stop>
+       <stop stop-color="#E2E85B" stop-opacity=".1" offset="100%"></stop>
+   </radialGradient>
+ </svg>
+</round-progress>
+<span>{{Month.First_Run|sqldate:"MMM"}}<br />{{Month.First_Run|sqldate:"YYYY"}}</span>
+</div>
+<div class="row" style="margin-top:5px;">
+<div class="col value" >
+  {{Month.Month_Runs}}
+</div>
+<div class="col value">
+  <i class="fa fa-road"></i>{{Month.Month_Distance| number: 2}}
+</div>
+</div>
+<div class="row">
+<div class="col value" >
+    <i class="ion-android-stopwatch"></i> {{Month.Month_Avg_Pace| pace}} /mi
+</div>
+<div class="col value">
+  <i class="ion-flame"></i>
+  {{Month.Month_Calories}}
+</div>
+</div>
+</div>

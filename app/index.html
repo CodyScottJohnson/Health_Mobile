@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <!-- ionic meta tags -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- custom meta tags -->
+    <meta name="format-detection" content="telephone=no"> <!-- no auto telephone linking -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- can be saved to home screen on ios -->
+    <title>Health</title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/morris.js/morris.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css main/styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="main/styles/main.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="main/styles/app.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="Health">
+
+    <!-- the nav bar will be updated as we navigate between views -->
+    <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
+    <ion-nav-bar class="bar-energized">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <!-- the current view will be rendered in the <ion-nav-view> directive -->
+    <ion-nav-view></ion-nav-view>
+
+    <!-- will be a 404 during development -->
+    <script src="cordova.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/localforage/dist/localforage.js"></script>
+    <script src="bower_components/ionic-native/ionic.native.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/eve-raphael/eve.js"></script>
+    <script src="bower_components/raphael/raphael.min.js"></script>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script src="bower_components/morris.js/morris.js"></script>
+    <script src="bower_components/angular-morris/build/module/angular-morris/angular-morris.min.js"></script>
+    <script src="bower_components/angular-svg-round-progressbar/build/roundProgress.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <!-- build:js scripts/app.js -->
+    <!-- inject:js -->
+    <script src="main/main.js"></script>
+    <script src="main/services/running-serv.js"></script>
+    <script src="main/services/main-serv.js"></script>
+    <script src="main/services/health-kit-serv.js"></script>
+    <script src="main/filters/running-fil.js"></script>
+    <script src="main/controllers/single-run-ctrl.js"></script>
+    <script src="main/controllers/run-ctrl.js"></script>
+    <script src="main/controllers/menu-ctrl.js"></script>
+    <script src="main/controllers/debug-ctrl.js"></script>
+    <script src="main/constants/config-const.js"></script>
+    <script src="app.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>

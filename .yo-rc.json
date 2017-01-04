@@ -1,0 +1,26 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "Health",
+      "appId": "com.cpv.health",
+      "ionicCss": false,
+      "bowerPackages": [
+        "localforage#~1.4.0"
+      ],
+      "platforms": [
+        "ios"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-dialogs",
+        "cordova-plugin-inappbrowser",
+        "ionic-plugin-keyboard",
+        "cordova-plugin-network-information",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-statusbar"
+      ],
+      "appModule": "Health",
+      "ecosystems": []
+    }
+  }
+}
