@@ -1,4 +1,4 @@
 {
-  "SERVER_URL": "https://DEVSERVER/api",
+  "API": "https://jfsapp.com/Open/API/Dashboard/",
   "SOME_OTHER_URL": "/postman-proxy"
 }

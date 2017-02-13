@@ -60,7 +60,7 @@
 
   <div class="item item-divider item-icon-right">
     Detail
-    <i class="icon ion-ios-refresh-outline"></i>
+    <i class="icon ion-ios-refresh-outline" ng-click="updateFromSource()"></i>
   </div>
 
   <a ui-sref="main.SingleRun({RunID:run.Run_ID})"ng-repeat="run in Running.CurrentMonth.Detail|orderBy:'start_time'" class="item detail" >
@@ -79,11 +79,6 @@
 </div>
 
     <div area-chart area-data='Running.Month' area-xkey='Label' area-ykeys='["Month_Runs"]' area-labels='["Number of Runs"]' area-resize='true'>
-    </div>
-    <div ng-repeat="Month in Running.Month|orderBy:'-First_Run'" style="margin-top:20px">
-      <div ng-include="'main/templates/Pages/Running/runoverviewcard.html'">
-
-      </div>
     </div>
   </ion-content>
 </ion-view>

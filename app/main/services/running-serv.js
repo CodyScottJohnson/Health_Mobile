@@ -1,7 +1,7 @@
 'use strict';
 angular.module('main')
-.service('Running', function ($http, $q, $rootScope, $filter) {
-  var currentMonth = $filter('date')(new Date(), 'MM') ;
+.service('Running', function ($http, $q, $rootScope, $filter, Config) {
+  var currentMonth = $filter('date')(new Date(), 'M') ;
   var currentYear = $filter('date')(new Date(), 'yyyy');
   var Running = {
     data: {}
@@ -67,7 +67,7 @@ angular.module('main')
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'https://jfsapp.com/Open/API/Dashboard/Run/Update/All',
+      url: Config.ENV.UserURL + 'Run/Update/All',
     }).then(function(data) {
       deferred.resolve(data.data);
     }, function(error) {
@@ -79,7 +79,7 @@ angular.module('main')
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'https://jfsapp.com/Open/API/Dashboard/Run/Update/All/Detail',
+      url: Config.ENV.UserURL + 'Run/Update/All/Detail',
     }).then(function(data) {
       deferred.resolve(data.data);
     }, function(error) {

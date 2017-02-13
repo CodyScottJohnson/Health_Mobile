@@ -19,9 +19,48 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <platform name="android">
+        <splash density="land-hdpi" src="res/android/current/splash-land-hdpi.png" />
+        <splash density="land-ldpi" src="res/android/current/splash-land-ldpi.png" />
+        <splash density="land-mdpi" src="res/android/current/splash-land-mdpi.png" />
+        <splash density="land-xhdpi" src="res/android/current/splash-land-xhdpi.png" />
+        <splash density="port-hdpi" src="res/android/current/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="res/android/current/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="res/android/current/splash-port-mdpi.png" />
+        <splash density="port-xhdpi" src="res/android/current/splash-port-xhdpi.png" />
+    </platform>
+    <platform name="android">
+        <icon density="ldpi" src="res/android/current/ldpi.png" />
+        <icon density="mdpi" src="res/android/current/mdpi.png" />
+        <icon density="hdpi" src="res/android/current/hdpi.png" />
+        <icon density="xhdpi" src="res/android/current/xhdpi.png" />
+        <icon density="xxhdpi" src="res/android/current/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/android/current/xxxhdpi.png" />
+    </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="ios">
+        <splash src="res/ios/current/Default@2x~universal~anyany.png" />
+        <splash src="res/ios/current/Default@3x~universal~anyany.png" />
+        <icon height="180" src="res/ios/current/icon_60@3x.png" width="180" />
+        <icon height="60" src="res/ios/current/icon_60.png" width="60" />
+        <icon height="120" src="res/ios/current/icon_60@2x.png" width="120" />
+        <icon height="76" src="res/ios/current/icon_76.png" width="76" />
+        <icon height="152" src="res/ios/current/icon_76@2x.png" width="152" />
+        <icon height="40" src="res/ios/current/icon_40.png" width="40" />
+        <icon height="80" src="res/ios/current/icon_40@2x.png" width="80" />
+        <icon height="57" src="res/ios/current/icon_default.png" width="57" />
+        <icon height="114" src="res/ios/current/icon_default@2x.png" width="114" />
+        <icon height="72" src="res/ios/current/icon_72.png" width="72" />
+        <icon height="144" src="res/ios/current/icon_72@2x.png" width="144" />
+        <icon height="29" src="res/ios/current/icon_small.png" width="29" />
+        <icon height="58" src="res/ios/current/icon_small@2x.png" width="58" />
+        <icon height="87" src="res/ios/current/icon_small@3x.png" width="87" />
+        <icon height="50" src="res/ios/current/icon_50.png" width="50" />
+        <icon height="100" src="res/ios/current/icon_50@2x.png" width="100" />
+        <icon height="167" src="res/ios/current/icon_83.5@2x.png" width="167" />
     </platform>
     <plugin name="cordova-plugin-device" spec="~1.1.4" />
     <plugin name="cordova-plugin-dialogs" spec="~1.3.1" />
@@ -32,4 +71,5 @@
     <plugin name="cordova-plugin-statusbar" spec="~2.2.1" />
     <plugin name="com.telerik.plugins.healthkit" spec="https://github.com/Telerik-Verified-Plugins/HealthKit.git" />
     <engine name="ios" spec="~4.3.1" />
+    <engine name="android" spec="~6.1.2" />
 </widget>

@@ -1,7 +1,10 @@
 # Health
 This project was generated with Generator-M-Ionic v1.10.1. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
-
+```bash
+gulp --cordova "platform add android@6.1 --save"
+```
 # Generator-M-Ionic v1.10.1
+gulp --cordova "build ios" --minify
 
 [![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]

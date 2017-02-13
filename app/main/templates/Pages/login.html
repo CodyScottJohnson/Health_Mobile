@@ -1,0 +1,27 @@
+<ion-view hide-nav-bar="true" class="view">
+  <!-- do you want padding? -->
+  <ion-content class="Login">
+    <div class="full_screen">
+      <div class="logo">
+        <i class="hf-heart-outline"></i>
+      </div>
+      <div class="box">
+
+        <div class="input">
+          <i class="icon ion-ios-person-outline"></i>
+          <input ng-model="Username" placeholder="Username" />
+        </div>
+        <div class="input">
+          <i class="icon ion-ios-locked-outline"></i>
+          <input ng-model="Password" placeholder="Password"/>
+        </div>
+
+
+      </div>
+      <div class="button-login" ng-click="User.Login(Username,Password)">
+        Sign In
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

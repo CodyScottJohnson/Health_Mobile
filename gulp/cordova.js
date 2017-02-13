@@ -89,6 +89,7 @@ gulp.task('serve-livereload', ['cordova-prepare'], function (done) {
     });
     // watch for changes in scss
     gulp.watch(paths.scssFiles, ['styles']);
+    gulp.watch(paths.lessFiles, ['less']);
     // watch for changes in environment files and new config files
     gulp.watch([
       'app/main/constants/env-*.json',

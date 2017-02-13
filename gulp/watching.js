@@ -93,11 +93,15 @@ gulp.task('watch-build', watchBuildDeps, function () {
   });
 });
 gulp.task('less', function () {
+  var l = less({});
+  l.on('error',function(e){
+    console.log(chalk.magenta(e));
+    l.emit('end');
+  });
   return gulp.src('app/main/styles/less/app.less')
-    .pipe(less({
-      paths: [ 'app/main/styles/less/' ]
-    }))
+    .pipe(l)
     .pipe(gulp.dest('app/main/styles/'));
+
 });
 // SERVE TASKS FOR PROTRACTOR
 gulp.task('serve', ['inject-all'], function () {

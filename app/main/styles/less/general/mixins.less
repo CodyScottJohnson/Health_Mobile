@@ -1,9 +1,13 @@
 .center {
   &.vertical {
+
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
     -webkit-transform: translate(0,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   &.horizontal {
     position: absolute;
@@ -101,6 +105,6 @@
     cursor: pointer;
   };
 }
-.background{
-  background-image:linear-gradient(-45deg, darken(#f97072,5%) 0%,#f97072 8%, #FD8d68 100%);
+.background(@fade: 100%){
+  background-image:linear-gradient(-45deg, fade(darken(#f97072,5%),@fade) 0%,fade(#f97072,@fade) 8%, fade(#FD8d68,@fade) 100%);
 }

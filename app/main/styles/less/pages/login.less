@@ -1,0 +1,75 @@
+.Login{
+  background-image: url('../assets/images/backgrounds/BG_1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .button-login{
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+    width:100%;
+    border-radius:0;
+    height:60px;
+    line-height: 60px;
+    position: absolute;
+    bottom:50px;
+    .background(80%);
+
+  }
+  .logo{
+    width: 100%;
+    height:33%;
+    text-align: center;
+    display: block;
+    position: relative;
+    i{
+      .center.horizontal;
+      bottom:0px;
+      font-size: 100px;
+      color:fade(@color-secondary-4,40%);
+    }
+    margin-bottom: 50px;
+  }
+  //height:100%;
+  //width:100%;
+  .box{
+
+    .center.both;
+    width:100%;
+    //padding:20px;
+    .input{
+      width:100%;
+      display: block;
+      position: relative;
+      vertical-align: baseline;
+      color: white;
+      i{
+        bottom: 5px;
+        position: absolute;
+        left:20px;
+        font-size: 50px;
+        color:fade(@color-secondary-4,60%);
+      }
+    input{
+      .Font_Body;
+      font-size: 17px;
+      width:100%;
+      vertical-align: bottom;
+      color:white!important;
+      &::placeholder{
+        color:white!important;
+      }
+      background: none;
+      padding-left: 80px;
+      border:none;
+      height:70px;
+      padding-top:30px;
+      border-radius: 0px;
+      border-bottom:1px solid fade(@color-secondary-4,30%);
+      outline: none;
+    }
+  }
+  }
+}

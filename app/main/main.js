@@ -8,9 +8,14 @@ angular.module('main', [
 .config(function ($stateProvider, $urlRouterProvider) {
 
   // ROUTING with ui.router
-  $urlRouterProvider.otherwise('/main/list');
+  $urlRouterProvider.otherwise('/login');
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
+    .state('login', {
+      url: '/login',
+      templateUrl: 'main/templates/pages/login.html',
+      controller: 'LoginCtrl as login'
+    })
     .state('main', {
       url: '/main',
       abstract: true,
@@ -45,7 +50,7 @@ angular.module('main', [
         }
       })
       .state('main.Dashboard', {
-        url: '/dashboard',
+        url: '/dashboar',
         views: {
           'pageContent': {
             templateUrl: 'main/templates/dashboard.html',
@@ -59,6 +64,15 @@ angular.module('main', [
           'pageContent': {
             templateUrl: 'main/templates/Pages/Running/monthdetail.html',
             controller: 'RunCtrl as ctrl'
+          }
+        }
+      })
+      .state('main.Clock', {
+        url: '/clock',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/Pages/Life/alarm.html',
+            controller: 'ClockCtrl as ctrl'
           }
         }
       })

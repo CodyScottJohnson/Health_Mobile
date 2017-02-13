@@ -1,4 +1,43 @@
 .bar-stable{
   .background!important;
   .BoxShadowHelper(1);
+  .button-icon{
+    color:@color-secondary-2-3!important;
+  }
+  .title{
+    .Font_Body;
+
+    font-size: 20px;
+    color:@color-secondary-2-3!important;
+  }
+}
+.bar-footer{
+  background:none;
+  &.bar-running{
+    .background;
+    border:none!important;
+    .BoxShadowHelperUp(1);
+    .title{
+      .Font_Body;
+      font-size: 20px;
+      color:fade(@color-secondary-2-3,50%);
+      span{
+        margin-left:10px;
+        margin-right:10px;
+        &.selected{
+          padding:5px;
+          border-bottom: 4px solid @color-secondary-2-3;
+          color:@color-secondary-2-3;
+        }
+      }
+    }
+  }
+}
+.full_screen{
+  position: relative;
+  display: block;
+  height: 100vh;
+  width:100%;
+  //-webkit-backdrop-filter:blur(1px);
+//  background: fade(@gray,10%);
 }
